@@ -1,0 +1,37 @@
+@import "../../../styles/global.scss";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+
+  &_primary {
+    color: $color-white;
+    background: $color-accent;
+  }
+  &_warn {
+    color: $color-white;
+    background: $color-warn;
+  }
+
+  &_secondary {
+    background: $color-white;
+
+    color: $color-accent;
+  }
+
+  &_outline {
+    background: transparent;
+    border: 3rem solid $color-white;
+    color: $color-white;
+  }
+
+  &_checked {
+    background: $color-warn;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}

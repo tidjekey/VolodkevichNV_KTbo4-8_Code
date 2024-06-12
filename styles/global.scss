@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables.scss";
+@import "./typography.scss";
+@import "./reset.scss";
+
+@import "../components/ui/input/input.scss";
+
+html {
+  font-size: min(calc(1vw / 14.4), 1px) !important;
+
+  @media screen and (max-width: 960px) {
+    font-size: calc(1vw / 3.9);
+  }
+}
+
+body {
+  font-family: sans-serif;
+  font-style: normal;
+  color: $color-white;
+  background: $color-black;
+
+  font-size: 18rem;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 960px) {
+  }
+}
+
+.border {
+  &_top {
+    border-top: 1rem solid #b9b7bc;
+    &_white {
+      border-top: 1rem solid $color-white;
+    }
+  }
+
+  &_bottom {
+    border-bottom: 1rem solid #b9b7bc;
+    &_white {
+      border-bottom: 1rem solid $color-white;
+    }
+  }
+
+  &_right {
+    &_accent {
+      border-right: 3rem solid $color-accent;
+    }
+  }
+
+  &_accent {
+    &_3 {
+      border: 3rem solid $color-accent;
+    }
+  }
+}
+
+.bg {
+  &_accent {
+    background: $color-accent;
+  }
+  &_black {
+    background: $color-black;
+  }
+  &_warn {
+    background: $color-warn;
+  }
+}
+
+.flow {
+  position: relative;
+  &__bg_wide {
+    z-index: -1;
+    content: " ";
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: $color-accent;
+  }
+}
+
+.bg_wide {
+  z-index: -1;
+  content: " ";
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: $color-accent;
+}
+
+.link_active {
+  font-weight: 600;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: -4rem;
+    height: 3rem;
+    width: 100%;
+    background: $color-accent;
+    border-radius: 10rem;
+  }
+}
+
+.catalog-card {
+  cursor: pointer;
+  border: 3rem solid transparent;
+  &:hover {
+    border-radius: 10rem;
+    border: 3rem solid $color-accent;
+    transition: border 0.3s;
+  }
+}
+
+.label_checkbox .checkbox {
+  display: none;
+}
+
+.label_checkbox span {
+  height: 20rem;
+  width: 20rem;
+  min-height: 20rem;
+  min-width: 20rem;
+  border: 1rem solid $color-accent;
+  display: inline-block;
+  position: relative;
+  border-radius: 4rem;
+}
+
+.label_checkbox_white span {
+  border: 1rem solid $color-white;
+ 
+}
+
+.label_checkbox_white {
+  [type="radio"]:checked + span:before {
+    background: $color-white;
+  }
+}
+
+[type="checkbox"]:checked + span:before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 14rem;
+  height: 14rem;
+  background: $color-accent;
+  border-radius: 4rem;
+}
+
+[type="radio"]:checked + span:before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 14rem;
+  height: 14rem;
+  background: $color-accent;
+  border-radius: 4rem;
+}

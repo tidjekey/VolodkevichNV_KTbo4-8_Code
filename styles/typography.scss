@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+.text {
+  &__main {
+    font-size: 18rem;
+    font-weight: 400;
+    line-height: 22rem;
+  }
+  &_small {
+    font-size: 14rem;
+    font-weight: 400;
+  }
+  &__title {
+    font-size: 60rem;
+    font-weight: 900;
+  }
+  &__subtitle {
+    font-size: 48rem;
+    font-weight: 700;
+  }
+
+  &__btn {
+    font-size: 28rem;
+    font-weight: 700;
+    &_small {
+      font-size: 14rem;
+      font-weight: 700;
+    }
+
+    &_medium {
+      font-size: 16rem;
+      font-weight: 700;
+    }
+  }
+
+  &__price {
+    font-size: 20rem;
+    font-weight: 400;
+    font-family: Poppins, sans-serif;
+  }
+
+  &_accent {
+    color: $color-accent;
+  }
+  &_white {
+    color: $color-white;
+  }
+  &_black {
+    color: $color-black;
+  }
+  &_warn {
+    color: $color-warn;
+  }
+}
